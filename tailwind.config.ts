@@ -1,11 +1,11 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
     fontSize: {
       xs: ["12px", "16px"],
@@ -34,8 +34,8 @@ const config: Config = {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
       },
       backgroundImage: {
-        hero: "url('assets/images/collection-background.svg')",
-        card: "url('assets/images/thumbnail-background.svg')",
+        hero: "url('/assets/images/collection-background.svg')",
+        card: "url('/assets/images/thumbnail-background.svg')",
       },
       screens: {
         wide: "1440px",
@@ -44,4 +44,3 @@ const config: Config = {
   },
   plugins: [],
 };
-export default config;
