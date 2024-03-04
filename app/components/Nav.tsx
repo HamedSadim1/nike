@@ -24,7 +24,7 @@ const Nav = () => {
             </li>
           ))}
         </ul>
-        <div className="hidden max-lg:block">
+        {/* <div className="hidden max-lg:block"> */}
           <Image src={hamburger} alt="Hamburger" width={25} height={25} />
           {/* TODO: handle click */}
           {/* {navLinks.map((link) => (
@@ -37,7 +37,7 @@ const Nav = () => {
               </Link>
             </div>
           ))} */}
-        </div>
+        {/* </div> */}
       </nav>
     </header>
   );
