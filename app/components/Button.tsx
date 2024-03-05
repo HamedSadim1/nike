@@ -3,10 +3,25 @@ import Image from "next/image";
 interface Props {
   label: string;
   iconUrl?: string;
+  backgroundColor?: string;
+  borderColor?: string;
+  textColor?: string;
 }
-const Button = ({ iconUrl, label }: Props) => {
+const Button = ({
+  iconUrl,
+  label,
+  backgroundColor,
+  borderColor,
+  textColor,
+}: Props) => {
   return (
-    <button className="flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none bg-coral-red rounded-full text-white border-coral-red">
+    <button
+      className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none ${
+        backgroundColor
+          ? `${backgroundColor} ${borderColor} ${textColor}`
+          : "bg-coral-red  text-white border-coral-red"
+      } rounded-full  `}
+    >
       {label}
       {iconUrl && (
         <Image
