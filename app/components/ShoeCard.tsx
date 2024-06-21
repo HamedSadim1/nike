@@ -1,12 +1,12 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 
-interface Image {
+interface IImageURL {
   bigShoe: StaticImageData;
   thumbnail: StaticImageData;
 }
 interface Props {
-  imgURL: Image;
+  imgURL: IImageURL;
   changeBigShoeImage: (img: StaticImageData) => void;
   bigShoeImg: StaticImageData;
 }
@@ -17,14 +17,14 @@ const ShoeCard = ({ changeBigShoeImage, bigShoeImg, imgURL }: Props) => {
   };
   return (
     <div
-    className={`border-2 rounded-xl ${
+    className={`rounded-xl border-2 ${
       bigShoeImg === imgURL.bigShoe
         ? "border-coral-red"
         : "border-transparent"
     } cursor-pointer max-sm:flex-1`}
     onClick={handleClick}
   >
-     <div className='flex justify-center items-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4 bg-coral-red'>
+     <div className='flex items-center justify-center rounded-xl bg-coral-red bg-card bg-cover bg-center max-sm:p-4 sm:size-40'>
         <Image
           src={imgURL.thumbnail}
           alt="shoe"

@@ -13,11 +13,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   subtext,
 }) => {
   return (
-    <div className="flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-[20px] shadow-3xl px-10 py-16">
-      <div className="w-11 h-11 flex justify-center items-center bg-coral-red rounded-full">
+    <div className="w-full flex-1 rounded-[20px] px-10 py-16 shadow-3xl sm:w-[350px] sm:min-w-[350px]">
+      <div className="flex size-11 items-center justify-center rounded-full bg-coral-red">
         <Image src={imgURL} alt={label} width={24} height={24} />
       </div>
-      <h3 className="mt-5 font-palanquin text-3xl leading-normal font-bold">
+      <h3 className="mt-5 font-palanquin text-3xl font-bold leading-normal">
         {label}
       </h3>
       <p className="mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray">

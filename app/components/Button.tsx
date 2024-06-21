@@ -6,6 +6,7 @@ interface Props {
   backgroundColor?: string;
   borderColor?: string;
   textColor?: string;
+  fullWidth?: boolean;
 }
 const Button = ({
   iconUrl,
@@ -13,21 +14,25 @@ const Button = ({
   backgroundColor,
   borderColor,
   textColor,
+  fullWidth,
 }: Props) => {
   return (
     <button
-      className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none ${
+      className={`flex items-center justify-center gap-2 border px-7 py-4 font-montserrat text-lg leading-none ${
         backgroundColor
           ? `${backgroundColor} ${borderColor} ${textColor}`
-          : "bg-coral-red  text-white border-coral-red"
-      } rounded-full  `}
+          : "border-coral-red  bg-coral-red text-white"
+      } rounded-full
+      ${fullWidth && "w-full"}
+
+        `}
     >
       {label}
       {iconUrl && (
         <Image
           src={iconUrl}
           alt="arrow-right"
-          className="ml-2 rounded-full w-5 h-5"
+          className="ml-2 size-5 rounded-full"
         />
       )}
     </button>

@@ -5,19 +5,19 @@ import Image from "next/image"
 
 const SuperQuality = () => {
   return (
-    <section id="about-us" className="flex justify-between items-center max-lg:flex-col gap-10 w-full max-container">
+    <section id="about-us" className="max-container flex w-full items-center justify-between gap-10 max-lg:flex-col">
       <div className='flex flex-1 flex-col'>
-        <h2 className='font-palanquin capitalize text-4xl lg:max-w-lg font-bold'>
+        <h2 className='font-palanquin text-4xl font-bold capitalize lg:max-w-lg'>
           We Provide You
           <span className='text-coral-red'> Super </span>
           <span className='text-coral-red'>Quality </span> Shoes
         </h2>
-        <p className='mt-4 lg:max-w-lg info-text'>
+        <p className='info-text mt-4 lg:max-w-lg'>
           Ensuring premium comfort and style, our meticulously crafted footwear
           is designed to elevate your experience, providing you with unmatched
           quality, innovation, and a touch of elegance.
         </p>
-        <p className='mt-6 lg:max-w-lg info-text'>
+        <p className='info-text mt-6 lg:max-w-lg'>
           Our dedication to detail and excellence ensures your satisfaction
         </p>
         <div className='mt-11'>
@@ -25,7 +25,7 @@ const SuperQuality = () => {
         </div>
       </div>
 
-      <div className='flex-1 flex justify-center items-center'>
+      <div className='flex flex-1 items-center justify-center'>
         <Image
           src={shoe8}
           alt='product detail'

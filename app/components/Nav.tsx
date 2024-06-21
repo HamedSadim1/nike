@@ -1,4 +1,3 @@
-import React from "react";
 import { headerLogo } from "@/assets/images";
 import { hamburger } from "@/assets/icons";
 import Image from "next/image";
@@ -7,21 +6,21 @@ import { navLinks } from "@/constants";
 
 const Nav = () => {
   return (
-    <header className="padding-x py-8 absolute z-10 w-full">
-      <nav className="flex justify-between items-center max-container">
+    <header className="padding-x absolute z-10 w-full py-8">
+      <nav className="max-container flex items-center justify-between">
         <Link href="/">
           <Image
             src={headerLogo}
             alt="headerLogo"
-            className="m-0 w-[129px] h-[29px]"
+            className="m-0 h-[29px] w-[129px]"
           />
         </Link>
-        <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
+        <ul className="flex flex-1 items-center justify-center gap-16 max-lg:hidden">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-montserrat leading-normal text-lg text-slate-gray"
+                className="font-montserrat text-lg leading-normal text-slate-gray"
               >
                 {link.label}
               </Link>
