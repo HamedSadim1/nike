@@ -18,7 +18,7 @@ const Button = ({
 }: Props) => {
   return (
     <button
-      className={`flex items-center justify-center gap-2 border px-7 py-4 font-montserrat text-lg leading-none ${
+      className={`font-montserrat flex items-center justify-center gap-2 border px-7 py-4 text-lg leading-none ${
         backgroundColor
           ? `${backgroundColor} ${borderColor} ${textColor}`
           : "border-coral-red  bg-coral-red text-white"
@@ -32,7 +32,9 @@ const Button = ({
         <Image
           src={iconUrl}
           alt="arrow-right"
-          className="ml-2 size-5 rounded-full"
+          width={20}
+          height={20}
+          className="ml-2 size-5 h-auto! w-auto! rounded-full"
         />
       )}
     </button>

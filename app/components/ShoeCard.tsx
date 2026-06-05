@@ -24,12 +24,11 @@ const ShoeCard = ({ changeBigShoeImage, bigShoeImg, imgURL }: Props) => {
     } cursor-pointer max-sm:flex-1`}
     onClick={handleClick}
   >
-     <div className='flex items-center justify-center rounded-xl bg-coral-red bg-card bg-cover bg-center max-sm:p-4 sm:size-40'>
+     <div className='bg-coral-red bg-card relative flex items-center justify-center rounded-xl bg-cover bg-center max-sm:p-4 sm:size-40'>
         <Image
           src={imgURL.thumbnail}
           alt="shoe"
-          width={127}
-          height={103}
+          fill
           className="object-contain"
         />
       </div>
