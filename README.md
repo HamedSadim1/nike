@@ -1,10 +1,11 @@
 # Nike Landing Page
 
-A modern, responsive Nike landing page built with **Next.js 15**, **Tailwind CSS v4**, and **TypeScript**. This project showcases best practices in component design with **DRY** (Don't Repeat Yourself) and **SSOT** (Single Source of Truth) principles.
+A modern, responsive Nike landing page built with **Next.js 16**, **Tailwind CSS v4**, and **TypeScript 6**. This project showcases best practices in component design with **DRY** (Don't Repeat Yourself) and **SSOT** (Single Source of Truth) principles.
 
 ## Tech Stack
 
-- **[Next.js 15](https://nextjs.org/)** — React framework with App Router
+- **[Next.js 16](https://nextjs.org/)** — React framework with App Router
+- **[React 19](https://react.dev/)** — UI library
 - **[Tailwind CSS v4](https://tailwindcss.com/)** — Utility-first CSS framework
 - **[TypeScript](https://www.typescriptlang.org/)** — Type safety
 - **ESLint + Prettier** — Code quality & formatting
