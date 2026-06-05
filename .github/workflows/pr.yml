@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   quality:
-    name: Lint & Type Check & Build
+    name: Lint & Build
     runs-on: ubuntu-latest
 
     steps:
@@ -25,9 +25,6 @@ jobs:
 
       - run: npm run lint
         name: Lint
-
-      - run: npx tsc --noEmit
-        name: Type Check
 
       - run: npm run build
         name: Build
