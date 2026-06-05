@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nike Landing Page
+
+A modern, responsive Nike landing page built with **Next.js 15**, **Tailwind CSS v4**, and **TypeScript**. This project showcases best practices in component design with **DRY** (Don't Repeat Yourself) and **SSOT** (Single Source of Truth) principles.
+
+## Tech Stack
+
+- **[Next.js 15](https://nextjs.org/)** — React framework with App Router
+- **[Tailwind CSS v4](https://tailwindcss.com/)** — Utility-first CSS framework
+- **[TypeScript](https://www.typescriptlang.org/)** — Type safety
+- **ESLint + Prettier** — Code quality & formatting
+- **Husky + commitlint** — Git hooks & conventional commits
+
+## Project Structure
+
+```
+app/
+├── components/
+│   ├── cards/           # Display cards (PopularProductCard, ReviewCard, etc.)
+│   ├── layout/          # Layout components (Nav)
+│   ├── sections/        # Page sections (Hero, Footer, Services, etc.)
+│   └── ui/              # Reusable UI components
+├── globals.css          # Global styles, theme, and utility classes
+├── layout.tsx           # Root layout
+└── page.tsx             # Home page with section configuration
+assets/
+├── icons/               # SVG icons
+└── images/              # PNG/SVG images
+constants/
+└── index.ts             # Single source of truth for data & text
+```
+
+## Reusable UI Components
+
+The project applies **DRY** (Don't Repeat Yourself) by extracting repeated patterns into reusable components:
+
+| Component | Purpose | Used In |
+|---|---|---|
+| **`SectionLayout`** | Wraps content with `container-main` (max-width: 1440px, centered) | All 8 sections + Nav |
+| **`SectionHeading`** | Heading with optional coral-red `<span>` highlight | PopularProducts, SuperQuality, SpecialOffer, CustomerReviews, Subscribe |
+| **`StarRating`** | Star icon + rating number display | PopularProductCard, ReviewCard |
+| **`PageSection`** | Section wrapper with padding for page layout | page.tsx (8x via `.map()`) |
+| **`Button`** | Styled button with optional icon | Hero, SpecialOffer, Subscribe |
+
+## Single Source of Truth (SSOT)
+
+All shared values are centralized in one place:
+
+- **Container width**: `--container-max-width: 1440px` in `globals.css` (referenced by `container-main` utility and `--breakpoint-wide` theme value)
+- **Text content**: All copy text in `constants/index.ts` (organized per section: `heroContent`, `superQualityContent`, etc.)
+- **Data**: Products, services, reviews, footer links, social media links in `constants/index.ts`
+- **Section layout**: `sectionConfig` array in `page.tsx` drives the page structure
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Lint & format
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Responsive design (mobile-first with Tailwind breakpoints)
+- Interactive shoe gallery in Hero section
+- Customer reviews with ratings
+- Newsletter subscription form
+- Product showcase grid
+- Footer with links and social media
 
-## Learn More
+## Commit Convention
 
-To learn more about Next.js, take a look at the following resources:
+This project uses [conventional commits](https://www.conventionalcommits.org/):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `feat:` — New feature
+- `fix:` — Bug fix
+- `refactor:` — Code restructuring
+- `chore:` — Tooling, dependencies, configuration
