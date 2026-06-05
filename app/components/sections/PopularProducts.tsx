@@ -1,5 +1,5 @@
 import { products } from "@/constants";
-import PopularProductCard from "../PopularProductCard";
+import { PopularProductCard } from "../cards";
 
 export const PopularProducts = () => {
   return (

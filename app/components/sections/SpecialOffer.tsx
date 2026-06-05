@@ -1,6 +1,6 @@
 import { offer } from "@/assets/images";
 import React from "react";
-import Button from "../Button";
+import { Button } from "../ui";
 import { arrowRight } from "@/assets/icons";
 import Image from "next/image";
 

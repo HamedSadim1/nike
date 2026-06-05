@@ -1,5 +1,5 @@
 import { shoe8 } from "@/assets/images"
-import Button from "../Button"
+import { Button } from "../ui"
 import Image from "next/image"
 
 

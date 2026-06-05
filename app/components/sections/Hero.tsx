@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Button from "../Button";
+import { Button } from "../ui";
 import { arrowRight } from "@/assets/icons";
 import { shoes, statistics } from "@/constants";
 import Image from "next/image";
 import { bigShoe1 } from "@/assets/images";
-import ShoeCard from "../ShoeCard";
+import { ShoeCard } from "../cards";
 
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
