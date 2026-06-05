@@ -3,11 +3,12 @@ import { hamburger } from "@/assets/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "@/constants";
+import { SectionLayout } from "../ui";
 
 const Nav = () => {
   return (
     <header className="absolute z-10 w-full px-8 py-8 sm:px-16">
-      <nav className="mx-auto flex max-w-[1440px] items-center justify-between">
+      <SectionLayout as="nav" className="flex items-center justify-between">
         <Link href="/">
           <Image
             src={headerLogo}
@@ -30,7 +31,7 @@ const Nav = () => {
         <div className="hidden max-lg:block">
           <Image src={hamburger} alt="Hamburger" width={25} height={25} />
         </div>
-      </nav>
+      </SectionLayout>
     </header>
   );
 };

@@ -1,13 +1,14 @@
 import { services } from "@/constants";
 import { ServiceCard } from "../cards";
+import { SectionLayout } from "../ui";
 
 const Services = () => {
   return (
-    <section className="mx-auto flex max-w-360 flex-wrap justify-center gap-9">
+    <SectionLayout className="flex flex-wrap justify-center gap-9">
       {services.map((service) => (
         <ServiceCard key={service.label} {...service} />
       ))}
-    </section>
+    </SectionLayout>
   );
 };
 

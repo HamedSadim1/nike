@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "../ui";
+import { Button, SectionLayout } from "../ui";
 import { arrowRight } from "@/assets/icons";
-import { shoes, statistics } from "@/constants";
+import { shoes, statistics, heroContent } from "@/constants";
 import Image from "next/image";
 import { bigShoe1 } from "@/assets/images";
 import { ShoeCard } from "../cards";
@@ -11,25 +11,24 @@ import { ShoeCard } from "../cards";
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
   return (
-    <section
+    <SectionLayout
       id="home"
-      className="mx-auto flex min-h-screen w-full max-w-360 flex-col justify-center gap-10 xl:flex-row"
+      className="flex min-h-screen w-full flex-col justify-center gap-10 xl:flex-row"
     >
       <div className="relative flex w-full flex-col items-start justify-center pt-28  max-xl:px-8 xl:w-2/5">
         <p className="font-montserrat text-coral-red text-xl">
-          Our Summer collections
+          {heroContent.badge}
         </p>
 
         <h1 className="font-palanquin mt-10 text-8xl font-bold max-sm:text-[72px] max-sm:leading-20.5">
           <span className="relative z-10 pr-10 xl:bg-white xl:whitespace-nowrap">
-            The New Arrival
+            {heroContent.titleStart}
           </span>
           <br />
-          <span className="text-coral-red mt-3 inline-block">Nike</span> Shoes
+          <span className="text-coral-red mt-3 inline-block">{heroContent.titleBrand}</span> {heroContent.titleEnd}
         </h1>
         <p className="font-montserrat text-slate-gray mt-6 mb-14 text-lg leading-8 sm:max-w-sm">
-          Discover stylish Nike arrivals, quality comfort, and innovation for
-          your active life.
+          {heroContent.description}
         </p>
 
         <Button label="Shop now" iconUrl={arrowRight} />
@@ -68,7 +67,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionLayout>
   );
 };
 

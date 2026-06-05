@@ -21,6 +21,8 @@ import {
   thumbnailShoe3,
 } from "@/assets/images";
 
+export const CONTAINER_MAX_WIDTH = 1440;
+
 export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about-us", label: "About Us" },
@@ -144,3 +146,69 @@ export const socialMedia = [
   { src: twitter, alt: "twitter logo" },
   { src: instagram, alt: "instagram logo" },
 ];
+
+// --- Hero Section ---
+export const heroContent = {
+  badge: "Our Summer collections",
+  titleStart: "The New Arrival",
+  titleBrand: "Nike",
+  titleEnd: "Shoes",
+  description:
+    "Discover stylish Nike arrivals, quality comfort, and innovation for your active life.",
+};
+
+// --- Super Quality Section ---
+export const superQualityContent = {
+  titlePrefix: "We Provide You",
+  titleHighlight1: "Super",
+  titleHighlight2: "Quality",
+  titleSuffix: "Shoes",
+  description1:
+    "Ensuring premium comfort and style, our meticulously crafted footwear is designed to elevate your experience, providing you with unmatched quality, innovation, and a touch of elegance.",
+  description2:
+    "Our dedication to detail and excellence ensures your satisfaction",
+};
+
+// --- Special Offer Section ---
+export const specialOfferContent = {
+  titleHighlight: "Special",
+  titleSuffix: "Offer",
+  description1:
+    "Embark on a shopping journey that redefines your experience with unbeatable deals. From premier selections to incredible savings, we offer unparalleled value that sets us apart.",
+  description2:
+    "Navigate a realm of possibilities designed to fulfill your unique desires, surpassing the loftiest expectations. Your journey with us is nothing short of exceptional.",
+};
+
+// --- Subscribe Section ---
+export const subscribeContent = {
+  titlePrefix: "Sign Up for",
+  titleHighlight: "Updates",
+  titleSuffix: "& Newsletter",
+  placeholder: "subscribe@nike.com",
+};
+
+// --- Popular Products Section ---
+export const popularProductsContent = {
+  titlePrefix: "Our",
+  titleHighlight: "Popular",
+  titleSuffix: "Products",
+  description:
+    "Experience top-notch quality and style with our sought-after selections. Discover a world of comfort, design, and value",
+};
+
+// --- Customer Reviews Section ---
+export const customerReviewsContent = {
+  titlePrefix: "What Our",
+  titleHighlight: "Customers",
+  titleSuffix: "Say?",
+  description:
+    "Hear genuine stories from our satisfied customers about their exceptional experiences with us.",
+};
+
+// --- Footer Section ---
+export const footerContent = {
+  description:
+    "Get shoes ready for the new term at your nearest Nike store. Find Your perfect Size In Store. Get Rewards",
+  copyright: "Copyright. All rights reserved.",
+  termsLabel: "Terms & Conditions",
+};

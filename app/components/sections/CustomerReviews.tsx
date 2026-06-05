@@ -1,17 +1,19 @@
-import { reviews } from "@/constants";
+import { reviews, customerReviewsContent } from "@/constants";
 import { ReviewCard } from "../cards";
+import { SectionHeading, SectionLayout } from "../ui";
 
 const CustomerReviews = () => {
   return (
-    <section className="mx-auto max-w-360">
-      <h3 className="font-palanquin text-center text-4xl font-bold">
-        What Our
-        <span className="text-coral-red"> Customers </span>
-        Say?
-      </h3>
+    <SectionLayout>
+      <SectionHeading
+        titlePrefix={customerReviewsContent.titlePrefix}
+        titleHighlight={customerReviewsContent.titleHighlight}
+        titleSuffix={customerReviewsContent.titleSuffix}
+        alignCenter
+        as="h3"
+      />
       <p className="font-montserrat text-slate-gray m-auto mt-4 max-w-lg text-center text-lg leading-7">
-        Hear genuine stories from our satisfied customers about their
-        exceptional experiences with us.
+        {customerReviewsContent.description}
       </p>
 
       <div className="mt-24 flex flex-1 items-center justify-evenly gap-14 max-lg:flex-col">
@@ -25,7 +27,7 @@ const CustomerReviews = () => {
           />
         ))}
       </div>
-    </section>
+    </SectionLayout>
   );
 };
 
