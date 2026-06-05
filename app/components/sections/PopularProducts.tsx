@@ -1,18 +1,18 @@
-import { products } from "@/constants";
+import { products, popularProductsContent } from "@/constants";
 import { PopularProductCard } from "../cards";
+import { SectionHeading, SectionLayout } from "../ui";
 
 export const PopularProducts = () => {
   return (
-    <section id="products" className="mx-auto max-w-360 max-sm:mt-12">
+    <SectionLayout id="products" className="max-sm:mt-12">
       <div className="flex flex-col justify-start gap-5">
-        <h2 className="font-palanquin text-4xl font-bold ">
-          Our
-          <span className="text-coral-red">Popular</span>
-          Products
-        </h2>
+        <SectionHeading
+          titlePrefix={popularProductsContent.titlePrefix}
+          titleHighlight={popularProductsContent.titleHighlight}
+          titleSuffix={popularProductsContent.titleSuffix}
+        />
         <p className="font-montserrat text-slate-gray mt-2 lg:max-w-lg ">
-          Experience top-notch quality and style with our sought-after
-          selections. Discover a world of comfort, design, and value
+          {popularProductsContent.description}
         </p>
       </div>
       <div className="mt-16 grid grid-cols-1  gap-14 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
@@ -23,7 +23,7 @@ export const PopularProducts = () => {
           />
         ))}
       </div>
-    </section>
+    </SectionLayout>
   );
 };
 

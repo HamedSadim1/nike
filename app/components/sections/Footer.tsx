@@ -1,12 +1,13 @@
 import { copyrightSign } from "@/assets/icons";
 import { footerLogo } from "@/assets/images";
-import { footerLinks, socialMedia } from "@/constants";
+import { footerLinks, socialMedia, footerContent } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { SectionLayout } from "../ui";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto max-w-360">
+    <SectionLayout as="footer">
       <div className="flex flex-wrap items-start justify-between gap-20 max-lg:flex-col">
         <div className="flex flex-col items-start">
           <Link href="/">
@@ -19,8 +20,7 @@ const Footer = () => {
             />
           </Link>
           <p className="font-montserrat text-white-400 mt-6 text-base leading-7 sm:max-w-sm">
-            Get shoes ready for the new term at your nearest Nike store. Find
-            Your perfect Size In Store. Get Rewards
+            {footerContent.description}
           </p>
           <div className="mt-8 flex items-center gap-5">
             {socialMedia.map((icon) => (
@@ -64,11 +64,11 @@ const Footer = () => {
             height={20}
             className="m-0 rounded-full"
           />
-          <p>Copyright. All rights reserved.</p>
+          <p>{footerContent.copyright}</p>
         </div>
-        <p className="font-montserrat cursor-pointer">Terms & Conditions</p>
+        <p className="font-montserrat cursor-pointer">{footerContent.termsLabel}</p>
       </div>
-    </footer>
+    </SectionLayout>
   );
 };
 
