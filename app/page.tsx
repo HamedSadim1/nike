@@ -1,4 +1,4 @@
-import Nav from "./components/Nav";
+import { Nav } from "./components/layout";
 import {
   CustomerReviews,
   Footer,
@@ -14,28 +14,28 @@ export default function Home() {
   return (
     <main className="relative ">
       <Nav />
-      <section className='xl:padding-l wide:padding-r padding-b'>
+      <section className='wide:pr-16 pb-12 sm:pb-24 xl:pl-16'>
         <Hero />
       </section>
-      <section className="padding">
+      <section className="px-8 py-12 sm:px-16 sm:py-24">
         <PopularProducts />
       </section>
-      <section className="padding">
+      <section className="px-8 py-12 sm:px-16 sm:py-24">
         <SuperQuality />
       </section>
-      <section className="padding-x py-10">
+      <section className="px-8 py-10 sm:px-16">
         <Services />
       </section>
-      <section className="padding">
+      <section className="px-8 py-12 sm:px-16 sm:py-24">
         <SpecialOffer />
       </section>
-      <section className="padding bg-pale-blue ">
+      <section className="bg-pale-blue px-8 py-12 sm:px-16 sm:py-24">
         <CustomerReviews />
       </section>
-      <section className="padding-x w-full py-16 sm:py-32">
+      <section className="w-full px-8 py-16 sm:px-16 sm:py-32">
         <Subscribe />
       </section>
-      <section className="padding padding-x padding-t bg-black pb-8">
+      <section className="bg-black px-8 py-12 pb-8 sm:px-16 sm:py-24">
         <Footer />
       </section>
     </main>

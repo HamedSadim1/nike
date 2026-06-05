@@ -1,12 +1,12 @@
 import { offer } from "@/assets/images";
 import React from "react";
-import Button from "../Button";
+import { Button } from "../ui";
 import { arrowRight } from "@/assets/icons";
 import Image from "next/image";
 
 const SpecialOffer = () => {
   return (
-    <section className="max-container flex items-center justify-between gap-10 max-xl:flex-col-reverse">
+    <section className="mx-auto flex max-w-[1440px] items-center justify-between gap-10 max-xl:flex-col-reverse">
       <div className="flex-1">
         <Image
           src={offer}
@@ -21,12 +21,12 @@ const SpecialOffer = () => {
           <span className="text-coral-red">Special </span>
           Offer
         </h2>
-        <p className="info-text mt-4">
+        <p className="font-montserrat text-slate-gray mt-4 text-lg leading-7">
           Embark on a shopping journey that redefines your experience with
           unbeatable deals. From premier selections to incredible savings, we
           offer unparalleled value that sets us apart.
         </p>
-        <p className="info-text mt-6">
+        <p className="font-montserrat text-slate-gray mt-6 text-lg leading-7">
           Navigate a realm of possibilities designed to fulfill your unique
           desires, surpassing the loftiest expectations. Your journey with us is
           nothing short of exceptional.
